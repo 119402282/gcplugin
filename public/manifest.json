@@ -2,25 +2,28 @@
     "manifest_version": 3,
     "name": "GreenCart",
     "version": "1.0",
-    "icon": "./images/leaf.png",
     "description": "A simple chrome extension for managing your carbon footprint.",
-    "browser_action": {
-        "default_icon": "./images/leaf.png",
-        "default_popup": "./popup.html"
+    "action": {
+        "default_icon": {              
+            "16": "images/icon.png",
+            "24": "images/icon.png",
+            "32": "images/icon.png"
+        },
+        "default_title": "GreenCart",
+        "default_popup": "popup.html"
     },
     "background": {
-        "scripts": ["background.js"]
+        "service-worker": ["background.js"]
     },
     "permissions": [
         "tabs",
         "storage",
-        "webRequest",
-        "webRequestBlocking"
+        "webRequest"
     ],
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["content.js"]
+            "js": ["popup.js"]
         }
     ]
 
