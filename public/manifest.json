@@ -16,6 +16,7 @@
         "service-worker": ["background.js"]
     },
     "permissions": [
+        "activeTab",
         "tabs",
         "storage",
         "webRequest"
@@ -23,7 +24,7 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["popup.js"]
+            "js": ["contentscript.js"]
         }
     ]
 
