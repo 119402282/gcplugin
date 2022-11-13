@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Chewy&family=Concert+One&family=Hind+Vadodara:wght@300;400;500;600;700&family=Permanent+Marker&family=Racing+Sans+One&display=swap');
+
+
+
+:root {
+	—secondary-font: 'ABeeZee', sans-serif;
+	—primary-font: 'Hind Vadodara', sans-serif;
+	—heading-font:  'Concert One', cursive;
+	—heading-chewy: 'Chewy', cursive;
+	—heading-racer: 'Racing Sans One', cursive;
+	—heading-marker: 'Permanent Marker', cursive;
+	—cursive-font: var(—heading-chewy);
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+
+	width: clamp(45ch, 50%, 75ch);
+	font-size: 16px;
+	font-family: var(—primary-font);
+}
+
+li {
+	font-family: var(—secondary-font);
+}
+
+ul {
+	list-style: none;
+}
+
+h1 {
+	font-family: var(—heading-font);
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: var(—cursive-font);
+}
+
+a {
+	text-decoration: none;
+}
+
+
+header nav ul {
+	display: flex;
+	width: 100vw;
+}
+
+header nav ul li {	
+	display: inline-block;
+}
+
